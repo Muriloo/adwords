@@ -15,7 +15,7 @@ with campaigns_source as (
 
 campaigns_renamed as (
 
-    select 
+    select
 
         id as campaign_id,
         name,
@@ -26,10 +26,10 @@ campaigns_renamed as (
         startdate as start_date,
         enddate as end_date,
         servingstatus as serving_status,
-        settings,
+        -- settings,
         status,
-        "_SDC_CUSTOMER_ID" as account_id,
-        labels
+        "_SDC_CUSTOMER_ID" as account_id
+        -- labels
 
     from campaigns_source
 

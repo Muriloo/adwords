@@ -11,7 +11,7 @@ with base as (
 
     select * from {{ var('criteria_performance_report') }}
 
-), 
+),
 
 aggregated as (
 
@@ -27,15 +27,18 @@ aggregated as (
         campaignid as campaign_id,
         campaignstate as campaign_state,
         customerid as customer_id,
+        account as account_name,
+        -- currency as account_currency #TBD
         _sdc_report_datetime,
+        1 as dim_store_fk,
         sum(clicks) as clicks,
         sum(impressions) as impressions,
         sum(cast((cost::float/1000000::float) as numeric(38,6))) as spend
 
     from base
-    group by 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+    group by 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 -- 13,14
 
-), 
+),
 
 ranked as (
 

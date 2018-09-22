@@ -15,12 +15,12 @@ with ads_source as (
 
 ads_renamed as (
 
-    select 
+    select
 
         adgroupid as ad_id,
         baseadgroupid as base_ad_group_id,
         basecampaignid as base_campaign_id,
-        policysummary as policy_summary,
+        -- policysummary as policy_summary,
         status as status,
         "_SDC_CUSTOMER_ID" as account_id
 

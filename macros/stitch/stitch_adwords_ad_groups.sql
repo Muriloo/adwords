@@ -15,7 +15,7 @@ with ad_groups_source as (
 
 ad_groups_renamed as (
 
-    select 
+    select
 
         id as ad_group_id,
         name,
@@ -23,11 +23,10 @@ ad_groups_renamed as (
         baseadgroupid as base_ad_group_id,
         basecampaignid as base_campaign_id,
         campaignid as campaign_id,
-        campaignname as campaign_name,
-        settings,
+        -- settings,
         status,
-        "_SDC_CUSTOMER_ID" as account_id,
-        labels
+        "_SDC_CUSTOMER_ID" as account_id
+        -- labels
 
     from ad_groups_source
 
