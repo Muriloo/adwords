@@ -30,6 +30,7 @@ aggregated as (
         customerid as customer_id,
         currency as currency,
         _sdc_report_datetime,
+        1 as dim_store_fk,
         sum(clicks) as clicks,
         sum(impressions) as impressions,
         sum(cast((cost::float/1000000::float) as numeric(38,6))) as spend

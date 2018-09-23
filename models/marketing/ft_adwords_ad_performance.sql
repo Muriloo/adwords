@@ -1,6 +1,6 @@
 select
-
-    campaign_name
+    dim_store_fk
+    , campaign_name
     , ad_group_name
     , criteria_id
     , date_day as campaign_date
