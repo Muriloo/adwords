@@ -7,7 +7,7 @@ select
     , account as account_name
     , currency as account_currency
     , 'adwords' as data_source
-    , 'paid' as traffic_type
+    , 'Paid' as traffic_type
     , 'SEM' as group_channel
     , 'sem' as medium
     , 'google' as "source"
